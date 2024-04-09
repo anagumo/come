@@ -1,4 +1,7 @@
 version: 2
+dependencies:
+  pre:
+    - gem install bundler -v 1.17.2
 jobs:
   build-and-test:
     macos:
@@ -6,10 +9,7 @@ jobs:
     environment:
       FL_OUTPUT_DIR: output
     steps:
-      - checkout
-      - run:
-        name: Force Bundler Version
-        command: gem install bundler -v 1.17.2
+      - checkouk
       - run: bundle install
       - run:
           name: Bundler Version
