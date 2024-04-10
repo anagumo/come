@@ -7,8 +7,7 @@ jobs:
       FL_OUTPUT_DIR: output
     steps:
       - checkout
-      - run: source $BUNDLER_V
-      - run: gem install bundler
+      - run: gem install bundler -v $BUNDLER_V
       - run:
           name: Bundler Version
           command: bundler -v
