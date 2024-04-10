@@ -8,10 +8,10 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Bundler Required Version
-        command: |
-          gem install bundler -v $BUNDLER_V
-          bundle install
+          name: Bundler Required Version
+          command: |
+            gem install bundler -v $BUNDLER_V
+            bundle install
       - run:
           name: Fastlane
           command: bundle exec fastlane $FASTLANE_LANE
