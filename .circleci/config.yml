@@ -24,5 +24,4 @@ workflows:
   build-test:
     jobs:
       - build-and-test:
-        context: 
-          - dependencies_env
+          context: dependencies_env
