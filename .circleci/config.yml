@@ -7,8 +7,7 @@ jobs:
       FL_OUTPUT_DIR: output
     steps:
       - checkout
-      - run: echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
-      - run: source $BASH_ENV
+      - run: source $BUNDLER_V
       - run: gem install bundler
       - run:
           name: Bundler Version
